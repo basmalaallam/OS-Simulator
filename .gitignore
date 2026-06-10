@@ -1,0 +1,41 @@
+# Java build output
+*.class
+bin/
+out/
+build/
+target/
+
+# Runtime-generated simulator files
+process_*_disk.txt
+OSSimulator/20
+OSSimulator/a
+OSSimulator/myfile.txt
+OSSimulator/second.txt
+OSSimulator/rr-demo.txt
+OSSimulator/mlfq-demo.txt
+OSSimulator/swap-demo.txt
+
+# IDE and OS files
+.gitconfig-local
+.classpath
+.project
+.settings/
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Packaged archives
+*.zip
+*.rar
+*.7z
+
+# Local-only assignment/submission artifacts
+GUC_*.pdf
+Starter_*.zip
