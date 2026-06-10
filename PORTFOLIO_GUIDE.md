@@ -69,15 +69,15 @@ Simulator screenshots and demo video
 Do not include these in the public repository:
 
 ```text
-OSSimulator/bin/
-OSSimulator/out/
+bin/
+out/
 *.class
 process_*_disk.txt
-OSSimulator/20
-OSSimulator/a
-OSSimulator/myfile.txt
-OSSimulator/second.txt
-OSSimulator/*-demo.txt
+20
+a
+myfile.txt
+second.txt
+*-demo.txt
 *.zip
 Starter_*.zip
 GUC_*.pdf
@@ -151,18 +151,17 @@ Current README media snippet:
 
 ### Recommendations Before Publishing
 
-- Add screenshots to the README.
-- Add a short demo GIF if possible.
+- Add a short demo GIF if you want the README preview to be visible without opening the MP4.
 - Add automated tests for scheduler decisions and memory allocation.
 - Convert the project to Maven or Gradle.
 - Add GitHub Actions for compilation.
 - Replace string states like `"READY"` and `"BLOCKED"` with a `ProcessState` enum.
-- Move demo programs into an `examples/` folder and make file paths configurable.
+- Make example program paths configurable from command-line arguments.
 - Add a small `docs/architecture.md` if you want to go one level deeper for technical reviewers.
 
 ## Suggested Repository Structure
 
-The current source is usable as-is. A future cleanup could move the nested project content to the repository root:
+The repository uses this clean public layout:
 
 ```text
 OS-Simulator/
@@ -176,19 +175,4 @@ OS-Simulator/
 |   `-- Program3.txt
 `-- src/
     `-- os/
-```
-
-If you keep the current Eclipse layout, publish:
-
-```text
-OS-Simulator/
-|-- README.md
-|-- PORTFOLIO_GUIDE.md
-|-- .gitignore
-|-- docs/
-`-- OSSimulator/
-    |-- src/
-    |-- Program1.txt
-    |-- Program2.txt
-    `-- Program3.txt
 ```

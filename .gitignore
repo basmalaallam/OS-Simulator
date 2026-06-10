@@ -7,13 +7,13 @@ target/
 
 # Runtime-generated simulator files
 process_*_disk.txt
-OSSimulator/20
-OSSimulator/a
-OSSimulator/myfile.txt
-OSSimulator/second.txt
-OSSimulator/rr-demo.txt
-OSSimulator/mlfq-demo.txt
-OSSimulator/swap-demo.txt
+20
+a
+myfile.txt
+second.txt
+rr-demo.txt
+mlfq-demo.txt
+swap-demo.txt
 
 # IDE and OS files
 .gitconfig-local

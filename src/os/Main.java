@@ -21,7 +21,7 @@ public class Main {
     private static final int DEFAULT_RR_QUANTUM = 2;
     private static final Scheduler.Algorithm DEFAULT_ALGORITHM = Scheduler.Algorithm.HRRN;
 
-    private static final String[] PROGRAM_FILES = {"Program1.txt", "Program2.txt", "Program3.txt"};
+    private static final String[] PROGRAM_FILES = {"examples/Program1.txt", "examples/Program2.txt", "examples/Program3.txt"};
     private static final int[] PROCESS_IDS = {1, 2, 3};
     private static final int[] ARRIVAL_TIMES = {0, 1, 4};
 

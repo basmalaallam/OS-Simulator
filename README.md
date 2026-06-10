@@ -109,14 +109,12 @@ The application separates core simulator responsibilities into focused packages:
 ### Build from Terminal
 
 ```bash
-cd OSSimulator
 javac -d out $(find src -name "*.java")
 ```
 
 On Windows PowerShell:
 
 ```powershell
-cd OSSimulator
 javac -d out (Get-ChildItem -Recurse -Filter *.java -Path src | ForEach-Object { $_.FullName })
 ```
 
@@ -136,7 +134,7 @@ Run the GUI:
 java -cp out os.gui.SimulatorGUI
 ```
 
-The simulator expects `Program1.txt`, `Program2.txt`, and `Program3.txt` to be available from the project working directory. The provided sample programs demonstrate user input, output, file access, and semaphore-protected resources.
+The simulator loads the provided sample programs from the `examples/` directory. These programs demonstrate user input, output, file access, and semaphore-protected resources.
 
 ## Project Structure
 
@@ -145,21 +143,22 @@ OS-Simulator/
 |-- README.md
 |-- PORTFOLIO_GUIDE.md
 |-- .gitignore
-|-- OSSimulator/
-|   |-- src/os/
-|   |   |-- Main.java
-|   |   |-- gui/
-|   |   |-- interpreter/
-|   |   |-- memory/
-|   |   |-- mutex/
-|   |   |-- process/
-|   |   `-- syscall/
+|-- docs/
+|   |-- demo/
+|   `-- screenshots/
+|-- examples/
 |   |-- Program1.txt
 |   |-- Program2.txt
-|   |-- Program3.txt
-|   `-- *.txt demo/input files
-`-- docs/
-    `-- screenshots/
+|   `-- Program3.txt
+`-- src/os/
+    |-- Main.java
+    |-- gui/
+    |-- interpreter/
+    |-- memory/
+    |-- mutex/
+    |-- process/
+    |-- scheduler/
+    `-- syscall/
 ```
 
 ## Screenshots
@@ -189,7 +188,7 @@ OS-Simulator/
 
 - Add automated unit tests for scheduler selection, memory allocation, swapping, and mutex behavior.
 - Convert the project to Maven or Gradle for easier builds and CI.
-- Move sample programs into a dedicated `examples/` directory and make their paths configurable.
+- Make sample program paths configurable through command-line arguments.
 - Add a visual memory grid to the GUI instead of relying only on log output.
 - Add exportable simulation reports for each run.
 - Add GitHub Actions to compile the project on every push.
